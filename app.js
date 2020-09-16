@@ -23,7 +23,7 @@ app.listen(8080);
 
 // configure DB
 // http://www.google.com
-let DB_URL = "mongodb://localhost:27017/week7tute";
+let DB_URL = "mongodb://" + process.argv[2] + ":27017/week7tute";
 mongoose.connect(DB_URL, function (err) {
     if (err) {
         print(err);
